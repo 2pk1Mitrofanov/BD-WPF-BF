@@ -215,26 +215,6 @@ namespace BDWPF
             }
         }
 
-
-        // Двойной клик для редактирования донора
-        private void dgDonor_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            try
-            {
-                var selectedDonor = dgMultiTable.SelectedItem as Donor;
-                if (selectedDonor != null)
-                {
-                    DonorWindow donorWindow = new DonorWindow(selectedDonor);
-                    donorWindow.ShowDialog();
-                    LoadMultiTableData();  // Обновляем данные доноров после редактирования
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при редактировании донора: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
         // Генерация PDF-отчета о сотрудниках
         private void GenerateEmployeeReportPDF(string filePath)
         {
