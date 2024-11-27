@@ -28,8 +28,7 @@
                 Click="Button_Delete"/>
 
 
-        <DataGrid Name="dgMultiTable" HorizontalAlignment="Left" Height="200" Margin="36,270,0,0" VerticalAlignment="Top" Width="425"
-                  MouseDoubleClick="dgDonor_MouseDoubleClick">
+        <DataGrid Name="dgMultiTable" HorizontalAlignment="Left" Height="200" Margin="36,270,0,0" VerticalAlignment="Top" Width="425">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding DonorID}" Header="Donor ID"/>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Name"/>
