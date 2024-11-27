@@ -22,28 +22,6 @@ namespace BDWPF
             }
         }
 
-        private void Button_Save(object sender, RoutedEventArgs e)
-        {
-            if (_donor == null)
-            {
-                _donor = new Donor
-                {
-                    Name = tbName.Text,
-                    ContactInfo = tbContactInfo.Text,
-                    DonationCount = int.Parse(tbDonationCount.Text)
-                };
-                db.Donor.Add(_donor); 
-            }
-            else
-            {
-                _donor.Name = tbName.Text;
-                _donor.ContactInfo = tbContactInfo.Text;
-                _donor.DonationCount = int.Parse(tbDonationCount.Text);
-            }
-
-            db.SaveChanges();
-            this.Close(); 
-        }
 
         private void Button_Cancel(object sender, RoutedEventArgs e)
         {

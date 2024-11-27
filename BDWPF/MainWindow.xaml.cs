@@ -215,51 +215,6 @@ namespace BDWPF
             }
         }
 
-        // Добавление донора
-        private void Button_AddDonor(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                DonorWindow donorWindow = new DonorWindow(null);
-                donorWindow.ShowDialog();
-                LoadMultiTableData();  // Обновляем данные доноров после добавления
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при добавлении донора: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        // Удаление донора
-        private void Button_DeleteDonor(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (dgMultiTable.SelectedItem is Donor selectedDonor)
-                {
-                    var donorToDelete = db.Donor.FirstOrDefault(d => d.DonorID == selectedDonor.DonorID);
-                    if (donorToDelete != null)
-                    {
-                        db.Donor.Remove(donorToDelete);
-                        db.SaveChanges();
-                        LoadMultiTableData();  // Обновляем данные доноров после удаления
-                        MessageBox.Show("Донор успешно удалён.", "Удаление", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Донор не найден в базе данных.", "Ошибка удаления", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Выберите донора для удаления.", "Ошибка удаления", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при удалении донора: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
 
         // Двойной клик для редактирования донора
         private void dgDonor_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)

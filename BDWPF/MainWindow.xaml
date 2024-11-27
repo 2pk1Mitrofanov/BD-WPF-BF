@@ -13,7 +13,7 @@
                 <DataGridTextColumn Binding="{Binding ContactInfo}" Header="ContactInfo"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Image  Source="C:\Users\1\source\repos\BDWPF\BDWPF\Resources\74334479a8de49b271221f746cf98af0.jpg" HorizontalAlignment="Right" Margin="0,0,200,80" VerticalAlignment="Bottom" Height="75" Grid.Column="1" RenderTransformOrigin="-1.524,-0.653"/>
+        <Image  Source="C:\Users\1\source\repos\BDWPF\BDWPF\Resources\74334479a8de49b271221f746cf98af0.jpg" HorizontalAlignment="Right" Margin="0,0,0,90" VerticalAlignment="Bottom" Height="105" Grid.Column="1" RenderTransformOrigin="-1.524,-0.653"/>
         <ComboBox Name="cbRoleFilter" HorizontalAlignment="Left" Margin="465,28,0,0" VerticalAlignment="Top" Width="120"
                   SelectionChanged="cbRoleFilter_SelectionChanged" />
         <TextBox Name="tbNameFilter" HorizontalAlignment="Left" Margin="465,68,0,0" VerticalAlignment="Top" Width="120" 
@@ -40,13 +40,9 @@
         <Image x:Name="image" Width="200" Height="200"></Image>
         <Button Click="OpenAddImageWindow" Content="Выбрать Изображение" Margin="-270,0,0,6" Width="200" VerticalAlignment="Bottom"></Button>
         
-        <Button Content="Add Donor" HorizontalAlignment="Left" Margin="522,270,0,0" VerticalAlignment="Top" Width="120"
-                Click="Button_AddDonor"/>
-        <Button Content="Delete Donor" HorizontalAlignment="Left" Margin="522,310,0,0" VerticalAlignment="Top" Width="120"
-                Click="Button_DeleteDonor"/>
 
-        <Button Content="Сформировать отчет" HorizontalAlignment="Left" Margin="521,510,0,0" VerticalAlignment="Top" Width="190" Click="Button_GenerateEmployeeReport_Click"/>
-        <Button Content="Открыть отчет по пожертвованиям" HorizontalAlignment="Left" Margin="490,545,0,0" VerticalAlignment="Top" Width="300" Click="OpenReportWindow_Click"/>
+        <Button Content="Сформировать отчет" HorizontalAlignment="Left" Margin="521,270,0,0" VerticalAlignment="Top" Width="190" Click="Button_GenerateEmployeeReport_Click"/>
+        <Button Content="Открыть отчет по пожертвованиям" HorizontalAlignment="Left" Margin="490,310,0,0" VerticalAlignment="Top" Width="300" Click="OpenReportWindow_Click"/>
 
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
 
