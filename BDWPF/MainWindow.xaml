@@ -1,0 +1,59 @@
+﻿<Window x:Class="BDWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid Name="dgEmployee" HorizontalAlignment="Left" Height="226" AutoGenerateColumns="False"
+                  Margin="36,28,0,0" VerticalAlignment="Top" Width="425"
+                  MouseDoubleClick="dgEmployee_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding EmployeeID}" Header="EID"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Name"/>
+                <DataGridTextColumn Binding="{Binding Role}" Header="Role"/>
+                <DataGridTextColumn Binding="{Binding ContactInfo}" Header="ContactInfo"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Image  Source="C:\Users\1\source\repos\BDWPF\BDWPF\Resources\74334479a8de49b271221f746cf98af0.jpg" HorizontalAlignment="Right" Margin="0,0,200,80" VerticalAlignment="Bottom" Height="75" Grid.Column="1" RenderTransformOrigin="-1.524,-0.653"/>
+        <ComboBox Name="cbRoleFilter" HorizontalAlignment="Left" Margin="465,28,0,0" VerticalAlignment="Top" Width="120"
+                  SelectionChanged="cbRoleFilter_SelectionChanged" />
+        <TextBox Name="tbNameFilter" HorizontalAlignment="Left" Margin="465,68,0,0" VerticalAlignment="Top" Width="120" 
+                 GotFocus="tbNameFilter_GotFocus" LostFocus="tbNameFilter_LostFocus" TextChanged="tbNameFilter_TextChanged" 
+                 Text="Filter by Name" Foreground="Gray"/>
+        <Button x:Name="btnCancelFilter" Content="Отменить фильтрацию" HorizontalAlignment="Left" 
+                VerticalAlignment="Bottom" Width="193" Margin="605,0,0,500" Height="30" Click="CancelFilterButton_Click"/>
+
+        <Button Content="Add New Employee" HorizontalAlignment="Left" Margin="522,230,0,0" VerticalAlignment="Top" Width="170"
+                Click="Button_Add"/>
+        <Button Content="Delete Employee" HorizontalAlignment="Left" Margin="522,190,0,0" VerticalAlignment="Top" Width="170"
+                Click="Button_Delete"/>
+
+
+        <DataGrid Name="dgMultiTable" HorizontalAlignment="Left" Height="200" Margin="36,270,0,0" VerticalAlignment="Top" Width="425"
+                  MouseDoubleClick="dgDonor_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding DonorID}" Header="Donor ID"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Name"/>
+                <DataGridTextColumn Binding="{Binding ContactInfo}" Header="Contact Info"/>
+                <DataGridTextColumn Binding="{Binding DonationCount}" Header="Donation Count"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Image x:Name="image" Width="200" Height="200"></Image>
+        <Button Click="OpenAddImageWindow" Content="Выбрать Изображение" Margin="-270,0,0,6" Width="200" VerticalAlignment="Bottom"></Button>
+        
+        <Button Content="Add Donor" HorizontalAlignment="Left" Margin="522,270,0,0" VerticalAlignment="Top" Width="120"
+                Click="Button_AddDonor"/>
+        <Button Content="Delete Donor" HorizontalAlignment="Left" Margin="522,310,0,0" VerticalAlignment="Top" Width="120"
+                Click="Button_DeleteDonor"/>
+
+        <Button Content="Сформировать отчет" HorizontalAlignment="Left" Margin="521,510,0,0" VerticalAlignment="Top" Width="190" Click="Button_GenerateEmployeeReport_Click"/>
+        <Button Content="Открыть отчет по пожертвованиям" HorizontalAlignment="Left" Margin="490,545,0,0" VerticalAlignment="Top" Width="300" Click="OpenReportWindow_Click"/>
+
+        <Button Content="Перейти на MetallPage" HorizontalAlignment="Left" Margin="521,350,0,0"
+                VerticalAlignment="Top" Width="195" Click="NavigateToMetallPage_Click"/>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
+
+        <Button Content="Экспорт CSV" Click="ExportToCsv_Click" HorizontalAlignment="Left" Margin="10,505,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Экспорт Excel" Click="ExportToExcel_Click" HorizontalAlignment="Left" Margin="10,540,0,0" VerticalAlignment="Top" Width="150"/>
+    </Grid>
+</Window>
