@@ -143,9 +143,6 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
-    <Compile Include="MetallPage.xaml.cs">
-      <DependentUpon>MetallPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,10 +210,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MetallPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="RegistrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

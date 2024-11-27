@@ -48,9 +48,6 @@
         <Button Content="Сформировать отчет" HorizontalAlignment="Left" Margin="521,510,0,0" VerticalAlignment="Top" Width="190" Click="Button_GenerateEmployeeReport_Click"/>
         <Button Content="Открыть отчет по пожертвованиям" HorizontalAlignment="Left" Margin="490,545,0,0" VerticalAlignment="Top" Width="300" Click="OpenReportWindow_Click"/>
 
-        <Button Content="Перейти на MetallPage" HorizontalAlignment="Left" Margin="521,350,0,0"
-                VerticalAlignment="Top" Width="195" Click="NavigateToMetallPage_Click"/>
-
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
 
         <Button Content="Экспорт CSV" Click="ExportToCsv_Click" HorizontalAlignment="Left" Margin="10,505,0,0" VerticalAlignment="Top" Width="150"/>

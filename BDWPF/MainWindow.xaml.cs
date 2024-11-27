@@ -341,10 +341,6 @@ namespace BDWPF
             reportWindow.ShowDialog();
         }
 
-        private void NavigateToMetallPage_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new MetallPage());
-        }
 
         private void ExportToCsv(string filePath)
         {
